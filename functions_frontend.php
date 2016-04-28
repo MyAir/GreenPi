@@ -37,6 +37,41 @@ function getValues($table, $sensor, $values, $limit){
 	return $ret_values; 
 }
 
+function getValuesAll($table, $values, $limit){
+  // Read $limit $values from $table from $sensor.
+	global $debug;
+	$return_var = 0;
+	$ret_values = array();
+	global $servername, $username, $password, $database;
+
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $database);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	
+	$valcount = count($values);	
+	$q = "SELECT $values[0]";
+	for ($i=1;$i<$valcount;$i++) {
+	  $q.= " ,$values[$i]";
+	}
+	$q.= " FROM $table";
+	$q.= " ORDER BY date_time DESC";
+	$q.= " LIMIT $limit";
+	$result = mysqli_query($conn,$q);
+
+	$o=0;
+	while($row = mysqli_fetch_assoc($result)){
+	  for($v=0;$v < $valcount;$v++){
+  	  $ret_values[$o][$v] = $row[$values[$v]];
+	  }
+	  $o++;
+	}
+  	mysqli_close($conn); 
+	return $ret_values; 
+}
+
 function getValuesMQHist($table, $limit){
   // Read $limit $values from $table from $sensor.
 	global $debug;
