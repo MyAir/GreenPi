@@ -13,7 +13,7 @@ require_once("./functions_frontend.php");
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <head>
-<title>RasPiViv.com - Home</title>
+<title>GreenPi - Home</title>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -552,7 +552,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
     <div class="col-sm-3">
       <a href="/b.php" title="BASE" alt="BASE">
         <span class="fa-stack fa-3x">
-          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-circle fa-stack-2x text-success"></i>
           <strong class="fa-stack-1x fa-stack-text fa-inverse">B</strong>
         </span>
       </a>
@@ -563,7 +563,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
     <div class="col-sm-3">
       <a href="/0.php" title="ENV" alt="ENV">
         <span class="fa-stack fa-3x">
-          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-circle fa-stack-2x text-success"></i>
           <strong class="fa-stack-1x fa-stack-text fa-inverse">E</strong>
         </span>
       </a>
@@ -574,7 +574,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
     <div class="col-sm-3">
       <a href="/1.php" title="VIV 1" alt="VIV 1">
         <span class="fa-stack fa-3x">
-          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-circle fa-stack-2x text-success"></i>
           <strong class="fa-stack-1x fa-stack-text fa-inverse">1</strong>
         </span>
       </a>
@@ -585,7 +585,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
     <div class="col-sm-3">
       <a href="/2.php" title="VIV 2" alt="VIV 2">
         <span class="fa-stack fa-3x">
-          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-circle fa-stack-2x text-success"></i>
           <strong class="fa-stack-1x fa-stack-text fa-inverse">2</strong>
         </span>
       </a>
@@ -598,7 +598,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
 <div class="container">
 <a href="/0.php" title="ENV" alt="ENV">
 <span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-circle fa-stack-2x text-success"></i>
   <strong class="fa-stack-1x fa-stack-text fa-inverse">E</strong>
 </span>
 </a>
@@ -608,7 +608,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
 <div class="container">
 <a href="/1.php" title="VIV 1" alt="VIV 1">
 <span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-circle fa-stack-2x text-success"></i>
   <strong class="fa-stack-1x fa-stack-text fa-inverse">1</strong>
 </span>
 </a>
@@ -618,7 +618,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
 <div class="container">
 <a href="/2.php" title="VIV 2" alt="VIV 2">
 <span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-circle fa-stack-2x text-success"></i>
   <strong class="fa-stack-1x fa-stack-text fa-inverse">2</strong>
 </span>
 </a>
