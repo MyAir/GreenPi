@@ -76,7 +76,7 @@ function getValuesMQHist($table, $limit){
   // Read $limit $values from $table from $sensor.
 	global $debug;
 	$return_var = 0;
-	$sensorCount = count($sensor);
+	// $sensorCount = count($sensor);
 	$ret_values = array();
 	global $servername, $username, $password, $database;
 

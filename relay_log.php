@@ -27,19 +27,33 @@ require_once("./functions_frontend.php");
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          [{label: 'date_time', id: 'date_time', type: 'datetime'}, 
-           {label: 'sensor', id: 'sensor', type: 'number'},
-           {label: 'state_old', id: 'state_old', type: 'number'},
-           {label: 'state_new', id: 'state_new', type: 'number'},
-           {label: 'reason', id: 'reason', type: 'string'}],
+          [{label: 'Timestamp', id: 'date_time', type: 'datetime'}, 
+           {label: 'Relay', id: 'sensor', type: 'string'},
+           {label: 'Old state', id: 'state_old', type: 'string'},
+           {label: 'New state', id: 'state_new', type: 'string'},
+           {label: 'Reason', id: 'reason', type: 'string'}],
 <?php 
-  $result = getValuesAll($tb_current_relay, ['date_time','sensor', 'state_old', 'state_new', 'reason'],100);
+  $result = getValuesAll($tb_current_relay, ['date_time','sensor', 'state_old', 'state_new', 'reason'],200);
   for($r=0;$r<count($result);$r++){
     // echo "['Date(".date(DATE_W3C,strtotime($result[$r][0])).")', "; 
-    echo "['Date(".(strtotime($result[$r][0])*1000).")', "; 
-    echo " ".$result[$r][1].", ";
-    echo " ".$result[$r][2].", "; 
-    echo " ".$result[$r][3].", "; 
+    echo "['Date(".(strtotime($result[$r][0])*1000).")', ";
+    if($result[$r][1] == 2){
+      echo " 'Light', ";
+      if($result[$r][2] == 0){echo " 'Off', ";}else{echo " 'On', ";}
+      if($result[$r][3] == 0){echo " 'Off', ";}else{echo " 'On', ";}
+    }elseif($result[$r][1] == 3){
+      echo " 'Fan', ";
+      if($result[$r][2] == 1){echo " 'Off', ";}else{echo " 'On', ";}
+      if($result[$r][3] == 1){echo " 'Off', ";}else{echo " 'On', ";}
+    }elseif($result[$r][1] == 4){
+      echo " 'Humifier', ";
+      if($result[$r][2] == 1){echo " 'Off', ";}else{echo " 'On', ";}
+      if($result[$r][3] == 1){echo " 'Off', ";}else{echo " 'On', ";}
+    }else{
+      echo " ".$result[$r][1].", ";
+      echo " ".$result[$r][2].", "; 
+      echo " ".$result[$r][3].", "; 
+    }
     echo " '".$result[$r][4]."' ],"; 
   }
   unset($result);
@@ -47,6 +61,7 @@ require_once("./functions_frontend.php");
         ]);
 
 	var options = {
+	   allowHtml:true,
   	title: 'Las 100 relay switch activities',
   	width: '100%', height: '100%'
   };
@@ -105,7 +120,7 @@ require_once("./functions_frontend.php");
 <hr>
 <div class="container">
     <div class="col-md-12">
-      <h3>Last 100 relay switch actions</h3>
+      <h3>Last 200 relay switch actions</h3>
       <div id="relay_log_div" style="width: auto; height: 500px;"></div>
     </div>
 </div>
