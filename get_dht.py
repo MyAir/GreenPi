@@ -18,7 +18,7 @@ digital_sensor_port = int(sys.argv[1]);
 # print digital_sensor_port
 
 # D7 and D8 are used for DHT22, others can be DHT11
-if digital_sensor_port == 7 or digital_sensor_port == 8:
+if digital_sensor_port == 6 or digital_sensor_port == 7 or digital_sensor_port == 8:
     sensor_typ = 1;
 else:
     sensor_typ = 0;

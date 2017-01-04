@@ -1,4 +1,3 @@
-<HTML>
 <?PHP
 // require_once("./include/membersite_config.php");
 
@@ -7,23 +6,43 @@
 //     $fgmembersite->RedirectToURL("login.php");
 //     exit;
 // }
-
 require_once("./functions_frontend.php");
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<head>
-<title>GreenPi - Home</title>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
+  <head>
+    <title>GreenPi - Home</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- JQuery Core JavaScript -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
+    <!--<script type="text/javascript">-->
+    <!--  google.charts.load('current', {'packages':[-->
+    <!--                                  'corechart', -->
+    <!--                                  'controls', -->
+    <!--                                  'gauge',-->
+                                      <!--// 'charteditor',-->
+    <!--                                  ],-->
+    <!--                                'language': 'de_CH'-->
+    <!--  });-->
+    <!--</script>-->
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload= 
+            {'modules':[{'name':'visualization','version':'1.1','packages':
+            [
+            'corechart', 
+            'controls', 
+            'gauge',
+            ]}]}"></script>
 <!-- ROOM TEMP GAUGE -->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["gauge"]});
+      // google.load("visualization", "1", {packages:["gauge"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
 
@@ -54,7 +73,7 @@ require_once("./functions_frontend.php");
 
 <!-- ROOM HUM GAUGE -->
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["gauge"]});
+      // google.load("visualization", "1", {packages:["gauge"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
 
@@ -82,9 +101,9 @@ require_once("./functions_frontend.php");
     </script>
 
 <!-- ENV MOIST GAUGE -->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["gauge"]});
+      // google.load("visualization", "1", {packages:["gauge"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
 
@@ -119,7 +138,7 @@ require_once("./functions_frontend.php");
 
 <!-- ENV QUAL GAUGE -->
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["gauge"]});
+      // google.load("visualization", "1", {packages:["gauge"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
 
@@ -151,9 +170,9 @@ require_once("./functions_frontend.php");
     </script>
 
 <!-- VIV 1 TEMP GAUGE -->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["gauge"]});
+      // google.load("visualization", "1", {packages:["gauge"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
 
@@ -187,7 +206,7 @@ require_once("./functions_frontend.php");
 
 <!-- VIV 1 HUM GAUGE -->
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["gauge"]});
+      // google.load("visualization", "1", {packages:["gauge"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
 
@@ -217,9 +236,9 @@ require_once("./functions_frontend.php");
       }
     </script>
 <!-- VIV 2 TEMP GAUGE -->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["gauge"]});
+      // google.load("visualization", "1", {packages:["gauge"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
 
@@ -253,7 +272,7 @@ require_once("./functions_frontend.php");
 
 <!-- VIV 2 HUM GAUGE -->
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["gauge"]});
+      // google.load("visualization", "1", {packages:["gauge"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
 
@@ -287,8 +306,8 @@ require_once("./functions_frontend.php");
 <!-- ENV HISTORY MOIST GRAPH -->
 
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
+      // google.load("visualization", "1", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           [{label: 'TIME', id: 'TIME', type: 'datetime'}, 
@@ -331,7 +350,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
 <!-- ENV HISTORY QUAL GRAPH -->
 
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
+      // google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
@@ -367,7 +386,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
 <!-- TANK 1 HISTORY HUM GRAPH -->
 
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
+      // google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
@@ -402,7 +421,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
 <!-- TANK 1 HISTORY TEMP GRAPH -->
 
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
+      // google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
@@ -436,7 +455,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
 <!-- TANK 2 HISTORY HUM GRAPH -->
 
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
+      // google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
@@ -472,7 +491,7 @@ options['pagingSymbols'] = {prev: 'prev', next: 'next'}; options['pagingButtonsC
 <!-- TANK 2 HISTORY TEMP GRAPH -->
 
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
+      // google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([

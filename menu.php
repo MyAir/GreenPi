@@ -54,6 +54,12 @@ echo '
   <i class="fa fa-camera fa-stack-1x fa-inverse"></i>
 </span>
 </a>
+<a href="/relay_log.php" title="Relay Log" alt="RELAYLOG">
+<span class="fa-stack fa-3x">
+  <i class="fa fa-circle fa-stack-2x text-success"></i>
+  <i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+</span>
+</a>
 ';
 ?>
 

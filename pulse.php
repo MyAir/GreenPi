@@ -83,7 +83,8 @@ $airQuality   = array(  'port'=>1, 'RC'=>-1,
                         'last_RC'=>-1, 'last_date_time'=>'', 
                         'last_quality'=>0);
 
-// light on/off hours: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,
+// light on/off hours
+//                  : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,
 $lightHours  = array( 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 
 //                    12,13,14,15,16,17,18,19,20,21,22,23
                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
@@ -96,9 +97,9 @@ $fanHours    = array( 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0,
 
 // humi on/off hours: WARNING! Relay is NC so values are inverted! 
 //                    0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,
-$humiHours   = array( 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 
+$humiHours   = array( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
 //                    12,13,14,15,16,17,18,19,20,21,22,23
-                      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
 // Include histAMin functions
 require './histAMin.php';
